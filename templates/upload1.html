@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Upload{% endblock %}
+
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="{% static 'css/base.css' %}" type="text/javascript">
+</script>
+{% endblock %}
+
+{% block body_block %}
+<div class="frame">
+  <div class="center">
+		<div class="bar"></div>
+		<div class="title">Drop file to upload</div>
+		<div class="dropzone">
+			<div class="content">
+				<img src="https://100dayscss.com/codepen/upload.svg" class="upload">
+				<span class="filename"></span>
+				<input type="file" class="input">
+			</div>
+		</div>
+		<img src="https://100dayscss.com/codepen/syncing.svg" class="syncing">
+		<img src="https://100dayscss.com/codepen/checkmark.svg" class="done">
+		<div class="upload-btn">Upload file</div>
+  </div>
+</div><div class="frame">
+  <div class="center">
+		<div class="bar"></div>
+		<div class="title">Drop file to upload</div>
+		<div class="dropzone">
+			<div class="content">
+				<img src="https://100dayscss.com/codepen/upload.svg" class="upload">
+				<span class="filename"></span>
+				<input type="file" class="input">
+			</div>
+		</div>
+		<img src="https://100dayscss.com/codepen/syncing.svg" class="syncing">
+		<img src="https://100dayscss.com/codepen/checkmark.svg" class="done">
+		<div class="upload-btn">Upload file</div>
+  </div>
+</div>
+{% endblock %}

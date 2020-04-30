@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Results{% endblock %}
+
+  {% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/register.css' %}">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  {% endblock %}
+
+{% block body_block %}
+  <div class="container">
+    <div id="content">
+      <h2>Inference</h2>
+      <p>If the average distance is high, then the surrounding weights are very different and a light color is assigned to the location of the weight. If the average distance is low, a darker color is assigned. The resulting maps show that the concentration of different clusters of species are more predominant in three zones. First figure tells us only about where the density of species is greater (darker regions) or less (lighter regions). The second visualisation tells us how they are specifically clustered.</p>
+      <h3>Uploaded Dataframe</h3>
+
+      <div class="dataframe">
+        {{ html | safe }}
+      </div>
+      <h2>Result of the SOM</h2>
+      <img src="../static/images/Figure_1.png" alt="SOM">
+      <p> <em>The darker parts represent clusters, while the lighter parts represent the division of the clusters.</em></p>
+      <h3>Percentage</h3>
+      <img class="pic5" src="../static/images/Figure_5.png" alt="SOM">
+      <h3>Number of Users</h3>
+      <img class="pic6"  src="../static/images/Figure_6.png" alt="SOM">
+      <h3>Caught! These are the Potential Fraudsters</h3>
+      <div class="dataframe">
+        {{ f | safe }}
+      </div>
+    </div>
+
+
+  </div>
+{% endblock %}
